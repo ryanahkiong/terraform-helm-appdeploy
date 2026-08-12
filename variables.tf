@@ -4,6 +4,12 @@ variable "name" {
   default     = "demo"
 }
 
+variable "namespace" {
+  description = "Please specify a namespace for your deployment"
+  type        = string
+  default     = "default"
+}
+
 variable "repository" {
   description = "Please specify a repository for your deployment"
   type        = string

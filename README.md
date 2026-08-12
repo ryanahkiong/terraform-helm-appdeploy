@@ -1,5 +1,5 @@
 # Usage
-#### Add below code to your provider
+#### Add below code to your provider.tf
 ```
 provider "helm" {
   kubernetes = {
@@ -24,8 +24,9 @@ provider "helm" {
 #### Add below code to your main.tf file
 ```
 module name {
-    source     = "ryanahkiong/appdeplot/helm"
+    source     = "ryanahkiong/appdeploy/helm"
     name       = "nginx-ingress-controller"
+    namespace  = "default"
     repository = "https://charts.bitnami.com/bitnami"
     chart      = "nginx-ingress-controller"
 }
